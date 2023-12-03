@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import prismadb from "@/lib/prismadb";
-
 import serverAuth from "@/lib/serverAuth";
 export async function GET() {
   try {

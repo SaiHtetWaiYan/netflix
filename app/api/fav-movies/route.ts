@@ -15,5 +15,6 @@ export async function GET() {
     return NextResponse.json(favouriteMovies);
   } catch (error) {
     console.log(error);
+    return new NextResponse("Internal Error", { status: 500 });
   }
 }

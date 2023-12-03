@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
+import Image from "next/image";
 export default async function AuthLayout({
   children,
 }: {
@@ -21,7 +22,12 @@ export default async function AuthLayout({
       >
         <div className="w-full h-full bg-black bg-opacity-50">
           <nav className="px-12 py-5">
-            <img src="/images/logo.png" alt="netflix logo" className="h-10" />
+            <Image
+              src="/images/logo.png"
+              alt="netflix logo"
+              width={100}
+              height={100}
+            />
           </nav>
           {children}
         </div>

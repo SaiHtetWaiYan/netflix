@@ -1,14 +1,12 @@
 import { NextResponse } from "next/server";
 import prismadb from "@/lib/prismadb";
 import serverAuth from "@/lib/serverAuth";
-
 export async function GET(
   req: Request,
   { params }: { params: { movieId: string } }
 ) {
   try {
     await serverAuth();
-
     const { movieId } = params;
 
     if (typeof movieId !== "string") {
@@ -32,11 +30,3 @@ export async function GET(
     return NextResponse.error();
   }
 }
-
-// import { NextResponse, NextRequest } from "next/server";
-
-// export async function GET(request: NextRequest) {
-//   return NextResponse.json({
-//     messsage: "hello world",
-//   });
-// }

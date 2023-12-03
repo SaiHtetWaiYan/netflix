@@ -12,6 +12,7 @@ import {
 import { BsChevronDown } from "react-icons/bs";
 import { IoIosLogOut } from "react-icons/io";
 import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
 export default function AccountMenu() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { data: session } = useSession();
@@ -21,7 +22,13 @@ export default function AccountMenu() {
         <Button variant="ghost" className="relative hover:bg-transparent ">
           <div className="flex flex-row items-center gap-2 cursor-pointer relative">
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-              <img src="/images/default-blue.png" alt="profile" />
+              <Image
+                className="rounded-md"
+                src="/images/default-blue.png"
+                alt="profile"
+                width={36}
+                height={36}
+              />
             </div>
 
             <BsChevronDown
@@ -39,10 +46,12 @@ export default function AccountMenu() {
       >
         <DropdownMenuGroup>
           <DropdownMenuItem className="focus:text-gray-300 focus:bg-transparent">
-            <img
+            <Image
               className="w-8 rounded-md mr-4"
               src="/images/default-blue.png"
               alt="profile"
+              width={32}
+              height={32}
             />
             {session?.user?.name}
           </DropdownMenuItem>
