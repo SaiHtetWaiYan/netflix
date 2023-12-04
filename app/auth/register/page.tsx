@@ -69,7 +69,6 @@ export default function Register() {
     try {
       setLoading(true);
       const res = await axios.post("/api/register", values);
-      console.log(res);
       if (res.status === 200) {
         await signIn("credentials", {
           email: values.email,
