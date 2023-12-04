@@ -2,6 +2,7 @@
 import useMovie from "@/hooks/useMovie";
 import { useRouter } from "next/navigation";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+
 export default function Watch({ params }: { params: { movieId: string } }) {
   const router = useRouter();
   const { movieId } = params;
@@ -18,6 +19,7 @@ export default function Watch({ params }: { params: { movieId: string } }) {
           <span className="font-light">Watching:</span> {data?.title}
         </p>
       </nav>
+
       <video src={data?.videoUrl} autoPlay controls className="h-full w-full" />
     </div>
   );

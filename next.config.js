@@ -8,6 +8,7 @@ const nextConfig = {
       "mango.blender.org",
       "download.blender.org",
       "m.media-amazon.com",
+      "loremflickr.com",
     ],
   },
 };

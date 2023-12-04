@@ -5,6 +5,7 @@ import MobileMenu from "@/components/MobileMenu";
 import AccountMenu from "@/components/AccountMenu";
 import { BsBell, BsSearch } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 const TOP_OFFSET = 66;
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,13 +32,15 @@ const Navbar = () => {
           isScrolled && "bg-zinc-900 bg-opacity-90"
         }`}
       >
-        <Image
-          className="h-4 lg:h-7"
-          src="/images/logo.png"
-          alt="logo"
-          width={100}
-          height={100}
-        />
+        <Link href="/">
+          <Image
+            className="h-4 lg:h-7 cursor-pointer"
+            src="/images/logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
+        </Link>
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItem label="Home" />
           <NavbarItem label="Series" />
