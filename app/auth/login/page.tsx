@@ -134,9 +134,6 @@ export default function AuthForm() {
                 >
                   <FcGoogle size={25} />
                 </div>
-                {/* <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center cursor-pointer hover:opacity-80 transition">
-                  <FaFacebook size={25} />
-                </div> */}
               </div>
               <p className="text-neutral-500 mt-4">
                 New to Netflix?

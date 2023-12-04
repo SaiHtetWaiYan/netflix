@@ -4,7 +4,6 @@ import prismadb from "@/lib/prismadb";
 import { compare } from "bcrypt";
 
 import GoogleProvider from "next-auth/providers/google";
-
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 export const authOptions: NextAuthOptions = {
